@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Main {
-    public  static void puntoUno(){
+    public static void puntoUno(){
         // “Joshua”, “Bloch”, “joshua@email.com”, ’M’.
         Autor autor_Joshua =  new Autor("Joshua", "Bloch","joshua@email.com", 'M');
         System.out.println(autor_Joshua.toString());
@@ -41,6 +41,7 @@ public class Main {
             System.out.println("Bienvenido a la guia 5 de programacion 2");
             System.out.println("1.- Libro.");
             System.out.println("2.- Cliente.");
+            System.out.println("3.- Circulo.");
             System.out.println("0.- Salir.");
             System.out.println("Ingrese una opcion: ");
             int opcion = sc.nextInt();
