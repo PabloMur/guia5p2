@@ -1,53 +1,33 @@
 package Entidades;
 
-import static java.lang.StringTemplate.STR;
-
-public class Autor {
-    private String nombre;
-    private String apellido;
-    private String email;
+public class Autor extends Persona {
     private char genero;
 
-    //Constructor
+    // Constructor
     public Autor(String nombre, String apellido, String email, char genero) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
+        super(nombre, apellido, email); // Llama al constructor de Persona
         this.genero = genero;
     }
-    public Autor() {}
 
-    //Setters and Getters
-    public String getNombre() {
-        return this.nombre;
+    public Autor() {
+        super("", "", ""); // Constructor vacío con valores por defecto
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public String getApellido() {
-        return this.apellido;
-    }
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-    public String getEmail() {
-        return this.email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
+
+    // Getter y Setter de genero
     public char getGenero() {
         return this.genero;
     }
+
     public void setGenero(char genero) {
         this.genero = genero;
     }
 
-    //Methods
-    public String getNombreCompleto() {
-        return STR."""\{this.getNombre()} \{this.getApellido()}""";
+    // Métodos
+    @Override
+    public String toString() {
+        return "Autor [ nombre: " + getNombreCompleto() +
+                ", email: " + getEmail() +
+                ", genero: " + getGenero() +
+                " ]";
     }
-
-
-
 }
