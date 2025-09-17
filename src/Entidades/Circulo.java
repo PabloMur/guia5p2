@@ -16,6 +16,11 @@ public class Circulo {
         this.color = "rojo";
     }
 
+    public Circulo(double radio) {
+        this.radio = radio;
+        this.color = "rojo"; // color por defecto
+    }
+
     // Getters y Setters
     public double getRadio() {
         return radio;
@@ -40,6 +45,6 @@ public class Circulo {
 
     @Override
     public String toString() {
-        return "Circulo: radio=" + radio + ", color=" + color;
+        return "Círculo{radio=" + radio + ", color='" + color + "'}";
     }
 }

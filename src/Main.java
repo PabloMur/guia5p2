@@ -1,7 +1,4 @@
-import Entidades.Autor;
-import Entidades.Cliente;
-import Entidades.Factura;
-import Entidades.Libro;
+import Entidades.*;
 
 import java.awt.*;
 import java.time.LocalDateTime;
@@ -33,6 +30,27 @@ public class Main {
 
     }
 
+    public static void puntoTres() {
+        // Primer cilindro con valores por defecto
+        Cilindro cilindro1 = new Cilindro();
+        System.out.println("=== Cilindro 1 (por defecto) ===");
+        System.out.println("Radio = " + cilindro1.getRadio());
+        System.out.println("Altura = " + cilindro1.getAltura());
+        System.out.println("Área total = " + cilindro1.getArea()); // área del cilindro
+        System.out.println("Volumen = " + cilindro1.getVolumen());
+        System.out.println(cilindro1);
+
+        // Segundo cilindro con radio, color y altura especificados
+        Cilindro cilindro2 = new Cilindro(5, "verde", 5);
+        System.out.println("\n=== Cilindro 2 (radio y altura dados) ===");
+        System.out.println("Radio = " + cilindro2.getRadio());
+        System.out.println("Altura = " + cilindro2.getAltura());
+        System.out.println("Área total = " + cilindro2.getArea()); // área del cilindro
+        System.out.println("Volumen = " + cilindro2.getVolumen());
+        System.out.println(cilindro2);
+    }
+
+
     public static void main(String[] args) {
 
         boolean seguir = true;
@@ -41,7 +59,7 @@ public class Main {
             System.out.println("Bienvenido a la guia 5 de programacion 2");
             System.out.println("1.- Libro.");
             System.out.println("2.- Cliente.");
-            System.out.println("3.- Circulo.");
+            System.out.println("3.- Circulo y Cilindro.");
             System.out.println("0.- Salir.");
             System.out.println("Ingrese una opcion: ");
             int opcion = sc.nextInt();
@@ -54,6 +72,9 @@ public class Main {
                     puntoDos();
                     break;
                 }
+                case 3:
+                    puntoTres();
+                    break;
                 case 0:{
                     System.out.println("Dale, nos vemos!");
                     seguir = false;
